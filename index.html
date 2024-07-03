@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!--Employee Management System-->
+    <div class="create-section">
+        <button id="modal-toggle-btn">Create Employee</button>
+        <div class="modal hide-modal" id="modal">
+            <span class="material-icons close-icon" id="close-icon">close</span>
+            <div class="modal-body">
+                <h1>Employee details</h1>
+                <form id="form">
+                    <input type="text" placeholder="Name of Employee" name="fullName" required />
+                    <input type="email" placeholder="Email of user" name="email" required />
+                    <select name="role">
+                        <option value="SDE">SDE</option>
+                        <option value="product">Product</option>
+                        <option value="Analyst">Analyst</option>
+                    </select>
+
+                    <input type="date" name="doj" required>
+                    <div>
+                        <div>
+                            <input type="radio" name="gender" value="male" id="male" required />
+                            <label for="male">Male</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="gender" value="female" id="female" required />
+                            <label for="female">Female</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="gender" value="others" id="others" required />
+                            <label for="others">Others</label>
+                        </div>
+                    </div>
+
+                    <button>Add Employee</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!--Employee list table we have to create-->
+    <table class="employee-list" id="employee-list">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Employee Id</th>
+                <th>Roll</th>
+                <th>Date of Joining</th>
+                <th>Gender</th>
+                <th>Option</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+        </tbody>
+    </table>
+
+    <!-- Creating a popup while clicking on update button-->
+
+    <div class="modal center-modal hide-modal" id="modal1">
+        <div class="modal-body update-modal-body">
+            <h1>Update Employee</h1>
+            <form id="form1">
+                <input type="text" placeholder="Name of Employee" name="name" required />
+                <input type="email" placeholder="Email of user" name="email" required />
+                <select name="role">
+                    <option value="SDE">SDE</option>
+                    <option value="product">Product</option>
+                    <option value="Analyst">Analyst</option>
+                </select>
+
+                <input type="date" name="doj" required>
+                <div>
+                    <div>
+                        <input type="radio" name="gender" value="male" id="update-male" required />
+                        <label for="update-male">Male</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="gender" value="female" id="update-female" required />
+                        <label for="update-female">Female</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="gender" value="others" id="update-others" required />
+                        <label for="update-others">Others</label>
+                    </div>
+                </div>
+
+                <button>Update Employee</button>
+            </form>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>
