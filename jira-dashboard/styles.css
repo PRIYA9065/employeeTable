@@ -1,0 +1,85 @@
+*{
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.task-card{
+    box-shadow: 2px 2px 8px #e7e7e7;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 5px;
+    align-items: center;
+}
+
+.badge{
+    background-color: #e7e7e7;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.image{
+    display: inline-flex;
+    padding: 7px;
+    border: 1px solid #e7e7e7;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin: 5px;
+    text-align: center;
+    justify-content: center;
+    color: white;
+    background-color: palevioletred;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    box-shadow: 1px 1px 5px #e7e7e7;
+    padding: 8px;
+    border-radius: 10px;
+}
+
+main{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 30px;
+}
+
+.modal{
+    width: 400px;
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+    border-radius: 10px;
+    padding: 25px 10px;
+    z-index: 10;
+    height: 47vh;
+    /* top: 45vh; */
+    transition: 0.6s linear;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 40px;
+    box-shadow: 2px 2px 10px gray;
+    background-color: white;
+    border-radius: 15px;
+}
+
+.toggle{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 15px;
+    border-radius: 50%;
+}
+
+.hide-modal{
+    /* top: 90vh; */
+    height: 0px;
+}
